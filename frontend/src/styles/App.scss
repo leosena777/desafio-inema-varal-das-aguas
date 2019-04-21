@@ -9,6 +9,7 @@ body {
   padding: 20px;
   position: fixed;
   width: 100%;
+  z-index: 10;
   ul {
     display: block;
     li {
@@ -58,9 +59,48 @@ header {
 
 main {
   background: $yellow;
+  h1 {
+    font-size: 16px;
+    color: $primary;
+    text-align: center;
+  }
+  p {
+    color: $grey-text;
+  }
   .mainContainer {
     background: $white;
     margin-top: -70px;
+  }
+  .box-info {
+    .box-blue {
+      background: $primary;
+      margin-top: -38px;
+      padding: 40px 35px;
+      font-size: 13px;
+      .titulo {
+        color: $secondary;
+      }
+      .texto {
+        color: $white;
+      }
+    }
+    .box-bt {
+      display: flex;
+      justify-content: center;
+      button {
+        background: $primary;
+        border: none;
+        color: #fff;
+        padding: 15px 22px;
+        font-size: 14px;
+      }
+    }
+  }
+  .list-regras {
+    padding: 0px;
+    margin: 0px;
+    padding-left: 15px;
+    color: $grey-text;
   }
 }
 
