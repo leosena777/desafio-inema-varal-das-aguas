@@ -1,6 +1,6 @@
 import React from "react";
 
-const MenuTopo = () => (
+const MenuTop = () => (
   <div className="menu-topo clearfix">
     <div className="container">
       <div className="row">
@@ -32,4 +32,4 @@ const MenuTopo = () => (
   </div>
 );
 
-export default MenuTopo;
+export default MenuTop;

@@ -56,6 +56,14 @@ header {
   }
 }
 
+main {
+  background: $yellow;
+  .mainContainer {
+    background: $white;
+    margin-top: -70px;
+  }
+}
+
 footer {
   background: $white;
   border-top: 8px $primary solid;

@@ -1,9 +1,9 @@
 import React from "react";
-import MenuTopo from "./MenuTopo";
+import MenuTop from "./MenuTop";
 
 const Header = () => (
   <header>
-    <MenuTopo />
+    <MenuTop />
     <div className="box-logo">
       <h1>Varal das Águas</h1>
       <h2>Concurso de Fotografia</h2>
