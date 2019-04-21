@@ -40,7 +40,7 @@ header {
   justify-content: center;
   .box-logo {
     padding: 50px 20px;
-    border: 2px white solid;
+    border: 2px $white solid;
     border-radius: 15px;
     align-self: center;
     color: $grey;
@@ -53,5 +53,17 @@ header {
     h2 {
       font-size: 25px;
     }
+  }
+}
+
+footer {
+  background: $white;
+  border-top: 8px $primary solid;
+  padding: 25px;
+  .row {
+    justify-content: center;
+  }
+  img {
+    align-self: center;
   }
 }
