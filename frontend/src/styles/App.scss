@@ -1,0 +1,25 @@
+@import "_colors";
+
+.menu-topo {
+  background: $primary;
+  padding: 20px;
+
+  ul {
+    display: block;
+    li {
+      float: left;
+      a {
+        color: $secondary;
+        display: block;
+        padding: 0px 15px;
+        text-decoration: none;
+        &:hover {
+          color: #fff;
+        }
+      }
+      .active {
+        color: #fff;
+      }
+    }
+  }
+}
