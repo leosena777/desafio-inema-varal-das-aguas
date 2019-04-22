@@ -5,11 +5,6 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-function modalInscricao(e) {
-  e.preventDefault();
-  console.log("The link was clicked.");
-}
-
 class Boxinfo extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -47,6 +42,7 @@ class Boxinfo extends React.Component {
                       type="text"
                       name="nome"
                       placeholder="Insira seu nome"
+                      required
                     />
                   </Form.Group>
                 </Col>
@@ -57,6 +53,7 @@ class Boxinfo extends React.Component {
                       type="text"
                       name="nomefoto"
                       placeholder="Insira o nome da foto"
+                      required
                     />
                   </Form.Group>
                 </Col>
@@ -70,6 +67,7 @@ class Boxinfo extends React.Component {
                       type="text"
                       name="local"
                       placeholder="Insira o local da foto"
+                      required
                     />
                   </Form.Group>
                 </Col>
@@ -80,6 +78,7 @@ class Boxinfo extends React.Component {
                       type="text"
                       name="nomefoto"
                       placeholder="MM/DD/YYYY"
+                      required
                     />
                   </Form.Group>
                 </Col>
@@ -93,6 +92,7 @@ class Boxinfo extends React.Component {
                       type="file"
                       name="nomefoto"
                       placeholder="MM/DD/YYYY"
+                      required
                     />
                   </Form.Group>
                 </Col>
@@ -158,6 +158,7 @@ class Boxinfo extends React.Component {
                 <Form.Check
                   type="checkbox"
                   label="Eu li e concordo com o s termos"
+                  required
                 />
               </Form.Group>
 
@@ -169,7 +170,6 @@ class Boxinfo extends React.Component {
             </Form>
           </Modal.Body>
         </Modal>
-
         <div className="box-info">
           <div className="box-blue">
             <div className="titulo">EXPOSIÇÃO DE FOTOS </div>
@@ -199,10 +199,10 @@ const MainContent = () => (
           <div className="row">
             <div className="mainContainer col-10 offset-1">
               <div className="row">
-                <div className="col-6 offset-1 mt-5">
+                <div className="col-md-6 offset-1 mt-5">
                   <h1>O CONCURSO</h1>
                   <div className="row">
-                    <p className="mt-4 col-10">
+                    <p className="mt-4 col-md-10" id="concurso">
                       Concurso de fotografia para todos os técnicos do Inema
                       para exposição de fotos que retratem a temática água (os
                       desafios e as belezas encontradas em campo) pelos
@@ -212,14 +212,14 @@ const MainContent = () => (
                     </p>
                   </div>
                 </div>
-                <div className="col-4">
+                <div className="col-md-4">
                   <Boxinfo />
                 </div>
               </div>
               <hr />
               <div className="row">
                 <div className="col-10 offset-1 mt-5">
-                  <h1>SOBRE</h1>
+                  <h1 id="sobre">SOBRE</h1>
                   <p>Objetivos</p>
                   <p>
                     Promover a seleção de 100 fotografias produzidas por
@@ -254,7 +254,7 @@ const MainContent = () => (
 
               <div className="row">
                 <div className="col-10 offset-1 mt-5">
-                  <h1>REGRAS</h1>
+                  <h1 id="regras">REGRAS</h1>
                   <p>
                     Todas as fotos que retrate da temática água (tais como
                     situação de secas ou excedentes hídricos, as belezas e os

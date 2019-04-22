@@ -4,7 +4,7 @@ import logoInema from "../images/logo-inema.jpg";
 const Footer = () => (
   <footer>
     <div className="row">
-      <img src={logoInema} />
+      <img src={logoInema} alt="logo inema" />
     </div>
   </footer>
 );

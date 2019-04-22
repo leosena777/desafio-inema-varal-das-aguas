@@ -6,31 +6,31 @@ body {
 }
 .container {
   max-width: 980px;
+  min-width: 420px;
 }
 
 .menu-topo {
   background: $primary;
-  padding: 14px;
   position: fixed;
   width: 100%;
   z-index: 10;
-  ul {
-    display: block;
-    li {
-      float: left;
+  #responsive-navbar-nav {
+    min-height: 35px;
+    .navbar-nav {
+      padding: 7px;
       a {
-        color: $secondary;
+        color: $secondary !important;
         display: block;
         padding: 0px 15px;
         text-decoration: none;
         font-size: 14px;
         @include animate;
         &:hover {
-          color: #fff;
+          color: #fff !important;
         }
       }
       .active {
-        color: #fff;
+        color: #fff !important;
       }
     }
   }
@@ -146,6 +146,23 @@ footer {
     p {
       color: $grey-text;
       font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    .box-info {
+      .box-blue {
+        margin: 0px;
+        max-width: 300px;
+        margin: 10px auto 0px auto;
+      }
+      .box-bt {
+        button {
+          margin-top: 20px !important;
+        }
+      }
     }
   }
 }
