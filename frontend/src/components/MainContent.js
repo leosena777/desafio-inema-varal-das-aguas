@@ -25,20 +25,20 @@ const MainContent = () => (
           <div className="row">
             <div className="mainContainer col-10 offset-1">
               <div className="row">
-                <div className="col-7 offset-1 mt-5">
+                <div className="col-6 offset-1 mt-5">
                   <h1>O CONCURSO</h1>
                   <div className="row">
-                    <p className="mt-5 col-10">
+                    <p className="mt-4 col-10">
                       Concurso de fotografia para todos os técnicos do Inema
                       para exposição de fotos que retratem a temática água (os
                       desafios e as belezas encontradas em campo) pelos
-                      colaboradores. Além de uma apresentação cultural com um
-                      artista de rua (poesia, musica, cordel) que aborde a
-                      temática água.
+                      colaboradores. <br /> Além de uma apresentação cultural
+                      com um artista de rua (poesia, musica, cordel) que aborde
+                      a temática água.
                     </p>
                   </div>
                 </div>
-                <div className="col-3">
+                <div className="col-4">
                   <Boxinfo />
                 </div>
               </div>

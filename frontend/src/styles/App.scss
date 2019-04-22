@@ -1,12 +1,16 @@
 @import "_colors";
+@import "_mixin";
 
 body {
   font-family: "Lato", sans-serif;
 }
+.container {
+  max-width: 980px;
+}
 
 .menu-topo {
   background: $primary;
-  padding: 20px;
+  padding: 14px;
   position: fixed;
   width: 100%;
   z-index: 10;
@@ -19,6 +23,8 @@ body {
         display: block;
         padding: 0px 15px;
         text-decoration: none;
+        font-size: 14px;
+        @include animate;
         &:hover {
           color: #fff;
         }
@@ -40,9 +46,10 @@ header {
   display: flex;
   justify-content: center;
   .box-logo {
+    margin-top: 130px;
     padding: 50px 20px;
     border-radius: 15px;
-    align-self: center;
+    align-self: flex-start;
     color: $grey;
     text-align: center;
     background: url("../images/borda.png") no-repeat center center;
@@ -66,22 +73,26 @@ main {
   }
   p {
     color: $grey-text;
+    font-size: 14px;
+    line-height: 17px;
   }
   .mainContainer {
     background: $white;
     margin-top: -70px;
+    padding-bottom: 50px;
   }
   .box-info {
     .box-blue {
       background: $primary;
       margin-top: -38px;
-      padding: 40px 35px;
+      padding: 40px 50px 50px 36px;
       font-size: 13px;
       .titulo {
         color: $secondary;
       }
       .texto {
         color: $white;
+        font-size: 12px;
       }
     }
     .box-bt {
@@ -91,8 +102,12 @@ main {
         background: $primary;
         border: none;
         color: #fff;
-        padding: 15px 22px;
-        font-size: 14px;
+        padding: 10px 20px;
+        font-size: 12px;
+        @include animate;
+        &:hover {
+          background: #288ebc;
+        }
       }
     }
   }
