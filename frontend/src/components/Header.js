@@ -3,14 +3,12 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
 class MenuTop extends React.Component {
-  modalInscricao() {
-    console.log("inscricao");
-  }
+  
 
   render() {
     return (
       <div className="menu-topo clearfix">
-        <div className="container" id="inicio">
+        <div className="container" >
           <Navbar
             collapseOnSelect
             className="navbar-expand-md"
@@ -20,11 +18,11 @@ class MenuTop extends React.Component {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link href="#inicio">ÍNICIO</Nav.Link>
+                <Nav.Link href="#topo">ÍNICIO</Nav.Link>
                 <Nav.Link href="#concurso">O CONCURSO </Nav.Link>
                 <Nav.Link href="#sobre">SOBRE</Nav.Link>
                 <Nav.Link href="#regras">REGRAS</Nav.Link>
-                <Nav.Link href="#inscricao" onClick={this.modalInscricao}>
+                <Nav.Link href="#inscricao">
                   INSCRIÇÃO
                 </Nav.Link>
               </Nav>

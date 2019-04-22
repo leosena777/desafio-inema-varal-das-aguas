@@ -248,6 +248,7 @@ class Boxinfo extends React.Component {
             <div className="texto">20/03/2017 das 16:30h ás 17:30h.</div>
           </div>
           <div className="box-bt">
+          <a className="anchor anchor3"  id="inscricao" />
             <button className="mt-5" onClick={this.handleShow}>
               FAÇA SUA INSCRIÇÃO
             </button>
@@ -267,9 +268,11 @@ const MainContent = () => (
             <div className="mainContainer col-10 offset-1">
               <div className="row">
                 <div className="col-md-6 offset-1 mt-5">
+                <a className="anchor"  id="concurso" />
+                <a className="anchor anchor2" id="topo" />
                   <h1>O CONCURSO</h1>
                   <div className="row">
-                    <p className="mt-4 col-md-10" id="concurso">
+                    <p className="mt-4 col-md-10" >
                       Concurso de fotografia para todos os técnicos do Inema
                       para exposição de fotos que retratem a temática água (os
                       desafios e as belezas encontradas em campo) pelos
@@ -286,7 +289,8 @@ const MainContent = () => (
               <hr />
               <div className="row">
                 <div className="col-10 offset-1 mt-5">
-                  <h1 id="sobre">SOBRE</h1>
+                  <h1 >SOBRE</h1>
+                  <a className="anchor" id="sobre" />
                   <p>Objetivos</p>
                   <p>
                     Promover a seleção de 100 fotografias produzidas por
@@ -321,7 +325,8 @@ const MainContent = () => (
 
               <div className="row">
                 <div className="col-10 offset-1 mt-5">
-                  <h1 id="regras">REGRAS</h1>
+                  <h1 >REGRAS</h1>
+                  <a className="anchor" id="regras" />
                   <p>
                     Todas as fotos que retrate da temática água (tais como
                     situação de secas ou excedentes hídricos, as belezas e os

@@ -1,9 +1,27 @@
 @import "_colors";
 @import "_mixin";
 
+html{
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Lato", sans-serif;
 }
+
+.anchor {
+  display: block;
+  position: relative;
+  top:-80px;
+  visibility: hidden;
+}
+.anchor2{
+  top:-1000px;
+}
+
+.anchor3{
+  top:-10px;
+}
+
 .container {
   max-width: 980px;
   min-width: 420px;
