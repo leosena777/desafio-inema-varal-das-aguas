@@ -9,6 +9,11 @@ Abra a pasta criada:
 
     cd varaldasaguas
 
+Entre no diretorio frontend:
+
+    cd frontend
+
+
 Inicie o projeto:
 
     npm start
