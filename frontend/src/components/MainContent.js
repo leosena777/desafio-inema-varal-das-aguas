@@ -13,9 +13,35 @@ class Boxinfo extends React.Component {
     this.handleClose = this.handleClose.bind(this);
 
     this.state = {
-      show: false
+      show: false,
+      nome:'',
+      nomefoto:'',
+      local:'',
+      data:'',
+      arquivo:''      
     };
   }
+
+  handleNomeChange(nome){
+    this.setState({nome});
+  }
+
+  handleNomeFotoChange(nomefoto){
+    this.setState({nomefoto});
+  }
+
+  handleLocalChange(local){
+    this.setState({local});
+  }
+
+  handleDataChange(data){
+    this.setState({data});
+  }
+
+  handleArquivoChange(arquivo){
+    this.setState({arquivo});
+  }
+
 
   handleClose() {
     this.setState({ show: false });
@@ -23,6 +49,36 @@ class Boxinfo extends React.Component {
 
   handleShow() {
     this.setState({ show: true });
+  }
+
+  submitForm(event){
+    event.preventDefault();
+    
+    return fetch('http://localhost:3001/inscricao', {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+                'Cache-Control': 'no-cache',
+            },
+            body: JSON.stringify({
+                nome: this.state.nome,
+                nomefoto: this.state.nomefoto,
+                local: this.state.local,
+                data: this.state.data,
+                arquivo: this.state.arquivo,
+                
+            }),
+        }).then((response) => response.json())
+        .then((responseJson) => this.requestOk(responseJson))
+        .catch((error) => console.log(error));
+
+
+  }
+
+  requestOk(){
+    alert('Inscricao Realizada com sucesso!');
+    this.setState({show:false})
   }
 
   render() {
@@ -33,7 +89,7 @@ class Boxinfo extends React.Component {
             <Modal.Title>Cadastro</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Form method="post" action="http://localhost:3001">
+            <Form method="post" action="http://localhost:3001" id="formInscricao" onSubmit={(event)=>{  this.submitForm(event) } }>
               <Row>
                 <Col>
                   <Form.Group controlId="formNome">
@@ -41,6 +97,8 @@ class Boxinfo extends React.Component {
                     <Form.Control
                       type="text"
                       name="nome"
+                      value={this.state.nome}
+                      onChange={(event) => this.handleNomeChange(event.target.value)}
                       placeholder="Insira seu nome"
                       required
                     />
@@ -52,6 +110,8 @@ class Boxinfo extends React.Component {
                     <Form.Control
                       type="text"
                       name="nomefoto"
+                      value={this.state.nomefoto}
+                      onChange={(event) => this.handleNomeFotoChange(event.target.value)}
                       placeholder="Insira o nome da foto"
                       required
                     />
@@ -61,12 +121,14 @@ class Boxinfo extends React.Component {
 
               <Row>
                 <Col>
-                  <Form.Group controlId="formNome">
+                  <Form.Group controlId="formNome" >
                     <Form.Label>Local da foto:</Form.Label>
                     <Form.Control
                       type="text"
                       name="local"
+                      value={this.state.local}
                       placeholder="Insira o local da foto"
+                      onChange={(event) => this.handleLocalChange(event.target.value)}
                       required
                     />
                   </Form.Group>
@@ -75,8 +137,10 @@ class Boxinfo extends React.Component {
                   <Form.Group controlId="formNomeFoto">
                     <Form.Label>data de registro</Form.Label>
                     <Form.Control
-                      type="text"
-                      name="nomefoto"
+                      type="date"
+                      name="data"
+                      value={this.state.data}
+                      onChange={(event) => this.handleDataChange(event.target.value)}
                       placeholder="MM/DD/YYYY"
                       required
                     />
@@ -90,8 +154,9 @@ class Boxinfo extends React.Component {
                     <Form.Label>Anexar Foto</Form.Label>
                     <Form.Control
                       type="file"
-                      name="nomefoto"
-                      placeholder="MM/DD/YYYY"
+                      name="arquivo"
+                      value={this.state.file}
+                      onChange={(event) => this.handleArquivoChange(event.target.value)}
                       required
                     />
                   </Form.Group>
@@ -163,7 +228,7 @@ class Boxinfo extends React.Component {
               </Form.Group>
 
               <Modal.Footer className="p-0 pt-3">
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit" >
                   Enviar
                 </Button>
               </Modal.Footer>
