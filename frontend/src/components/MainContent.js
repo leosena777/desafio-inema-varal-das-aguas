@@ -60,6 +60,8 @@ class Boxinfo extends React.Component {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
                 'Cache-Control': 'no-cache',
+                'Access-Control-Allow-Origin':'*',
+                'Access-Control-Allow-Headers':'Origin, X-Requested-With, Content-Type, Accept'
             },
             body: JSON.stringify({
                 nome: this.state.nome,
