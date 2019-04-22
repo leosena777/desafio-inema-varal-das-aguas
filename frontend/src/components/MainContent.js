@@ -73,14 +73,25 @@ class Boxinfo extends React.Component {
             }),
         }).then((response) => response.json())
         .then((responseJson) => this.requestOk(responseJson))
-        .catch((error) => console.log(error));
+        .catch((error) => this.requestFailed(error));
 
 
   }
 
   requestOk(){
     alert('Inscricao Realizada com sucesso!');
-    this.setState({show:false})
+    this.setState({
+      show: false,
+      nome:'',
+      nomefoto:'',
+      local:'',
+      data:'',
+      arquivo:''      
+     })
+  }
+
+  requestFailed(){
+    alert('Erro! Não foi possível realizar a operação');
   }
 
   render() {

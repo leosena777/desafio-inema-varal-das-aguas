@@ -18,7 +18,7 @@ class MenuTop extends React.Component {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link href="#topo">ÍNICIO</Nav.Link>
+                <Nav.Link href="#topo">INÍCIO</Nav.Link>
                 <Nav.Link href="#concurso">O CONCURSO </Nav.Link>
                 <Nav.Link href="#sobre">SOBRE</Nav.Link>
                 <Nav.Link href="#regras">REGRAS</Nav.Link>
